@@ -1,0 +1,2 @@
+ALTER TABLE questions DROP CONSTRAINT questions_section_check;
+ALTER TABLE questions ADD CONSTRAINT questions_section_check CHECK (section = ANY (ARRAY['Expenditure'::text, 'Establishment'::text, 'Stores'::text, 'Books & Budget'::text, 'Traffic'::text]));
